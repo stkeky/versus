@@ -17,6 +17,7 @@ jobs:
           node-version: 19
           cache: 'npm'
           cache-dependency-path: versus-app/package-lock.json
+      - run: npm ci
       - name: Deploy with gh-pages
         run: |
          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
