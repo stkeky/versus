@@ -1,7 +1,8 @@
 name: Deploy GH pages
 run-name: ${{ github.actor }} is deploying to GH pages 🚀
-on: [push]
-  branches: [master]
+on:
+  push:
+    branches: [master]
 
 jobs:
   deploy-gh-pages:
