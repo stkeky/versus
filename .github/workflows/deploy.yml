@@ -1,0 +1,19 @@
+name: Deploy GH pages
+run-name: ${{ github.actor }} is deploying to GH pages 🚀
+on: [push]
+  branches: [master]
+
+jobs:
+  deploy-gh-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job triggered by a ${{ github.event_name }} event is running on ${{ runner.os }} for branch ${{ github.ref }}"
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Deploy with gh-pages
+        run: |
+         git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+         npm run deploy -- -u "stkeky_gh_bot <st.keky+ghbot@gmail.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
