@@ -1,88 +1,86 @@
-import React from 'react';
-import {Avatar, Card, Col, Divider, Layout, Progress, Row, Space, theme, Typography} from 'antd';
-import {EditOutlined, EllipsisOutlined, SettingOutlined} from "@ant-design/icons";
+import React, {Fragment} from 'react';
 
 import data from "./../db.json";
+import {Card, Divider, Grid, Header, Icon, Image} from "semantic-ui-react";
 
-const {Content} = Layout;
-const {Title} = Typography;
 
-const {Meta} = Card;
+const listData = [
+    {
+        title: 'Ant Design Title 1',
+    },
+    {
+        title: 'Ant Design Title 2',
+    },
+    {
+        title: 'Ant Design Title 3',
+    },
+    {
+        title: 'Ant Design Title 4',
+    },
+];
 
 const Snooze: React.FC = () => {
-    const {
-        token: {colorBgContainer},
-    } = theme.useToken();
+
 
     return (
-        <Content style={{margin: '0 0px'}}>
-            <div style={{padding: 24, minHeight: "100%", background: colorBgContainer}}>
-                <Title level={2}>Snooze</Title>
+        <Fragment>
+            <div style={{padding: 24, minHeight: "100%"}}>
+                <Header level={2}>Snooze</Header>
 
                 <Divider/>
 
-                <Row>
-                    <Col span={4}>
-                        <Card
-                            hoverable
+                <Grid celled divided>
+                    <Grid.Row>
+                        <Grid.Column width={3}>
+                            <Card key="stkeky" link>
+                                <Image alt="stkeky"
+                                       src="https://avatars.githubusercontent.com/u/16312404?v=4"
+                                       wrapped ui={false}/>
+                                <Card.Content>
+                                    <Card.Header>stkeky</Card.Header>
+                                    <Card.Meta>
+                                        <span className='date'>player one</span>
+                                    </Card.Meta>
+                                    <Card.Description>
+                                        Simple guy trying to resolve bad habit.
+                                    </Card.Description>
+                                </Card.Content>
+                                <Card.Content extra>
+                                    <a>
+                                        <Icon name='user'/>
+                                        {data.stkeky.supporters} Supporters
+                                    </a>
+                                </Card.Content>
+                            </Card>
+                        </Grid.Column>
+                        <Grid.Column width={10}></Grid.Column>
+                        <Grid.Column width={3}>
+                            <Card key="snooze" link>
+                                <Image alt="snooze"
+                                       src="https://cdn-icons-png.flaticon.com/512/9188/9188917.png"
 
-                            cover={
-                                <img
-                                    alt="stkeky"
-                                    src="https://avatars.githubusercontent.com/u/16312404?v=4"
-                                />
-                            }
-                            actions={[
-                                <SettingOutlined key="setting"/>,
-                                <EditOutlined key="edit"/>,
-                                <EllipsisOutlined key="ellipsis"/>,
-                            ]}
-                        >
-                            <Meta
-                                avatar={<Avatar src="https://source.boringavatars.com/bauhaus/120"/>}
-                                title="stkeky"
-                                description="Contender number one"
-                            />
-                        </Card>
-                    </Col>
-                    <Col span={2}>
-                        <Space style={{margin:10}}>
-                            <Progress type="circle" percent={data.stkeky.streak} format={(percent) => `${percent} Days`}/>
-                        </Space>
-                    </Col>
-                    <Col span={12}></Col>
-                    <Col span={2}>
-                        <Space style={{margin:10}}>
-                            <Progress type="circle" percent={data.snooze.streak} format={(percent) => `${percent} Days`}/>
-                        </Space>
-                    </Col>
-                    <Col span={4}>
-                        <Card
-                            hoverable
-
-                            cover={
-                                <img
-                                    alt="Snooze button"
-                                    src="https://cdn-icons-png.flaticon.com/512/9188/9188917.png"
-                                />
-                            }
-                            actions={[
-                                <SettingOutlined key="setting"/>,
-                                <EditOutlined key="edit"/>,
-                                <EllipsisOutlined key="ellipsis"/>,
-                            ]}
-                        >
-                            <Meta
-                                avatar={<Avatar src="https://source.boringavatars.com/bauhaus/120"/>}
-                                title="Snooze button"
-                                description="Contender number two"
-                            />
-                        </Card>
-                    </Col>
-                </Row>
-
+                                       wrapped ui={false}/>
+                                <Card.Content>
+                                    <Card.Header>Snooze button</Card.Header>
+                                    <Card.Meta>
+                                        <span className='date'>player two</span>
+                                    </Card.Meta>
+                                    <Card.Description>
+                                        Proper sleeping habits depriving monster.
+                                    </Card.Description>
+                                </Card.Content>
+                                <Card.Content extra>
+                                    <a>
+                                        <Icon name='user'/>
+                                        {data.snooze.supporters} Supporters
+                                    </a>
+                                </Card.Content>
+                            </Card>
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
             </div>
-        </Content>
+        </Fragment>
     );
 };
 

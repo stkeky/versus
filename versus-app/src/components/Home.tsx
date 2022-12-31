@@ -1,22 +1,19 @@
 import React from 'react';
-import {Layout, Skeleton, theme, Typography} from 'antd';
-
-const {Content} = Layout;
-const {Title} = Typography;
+import {Container, Header, Label, Segment} from "semantic-ui-react";
 
 
 const Home: React.FC = () => {
-    const {
-        token: {colorBgContainer},
-    } = theme.useToken();
-
+    
     return (
-        <Content style={{margin: '0 0px'}}>
-            <div style={{padding: 24, minHeight: "100%", background: colorBgContainer}}>
-                <Title level={2}>Home</Title>
-                <Skeleton active/>
-            </div>
-        </Content>
+        <Container className="center aligned with-margin" style={{margin: 80}}>
+            <Segment>
+                <Header size="huge">Versus</Header>
+                <Label color="black" className="center aligned">0.0.1</Label>
+            </Segment>
+            <Segment>
+                <Header size="medium">Versus© 2022</Header>
+            </Segment>
+        </Container>
     );
 };
 
