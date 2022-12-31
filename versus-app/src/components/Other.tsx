@@ -2,7 +2,7 @@ import React from 'react';
 import {Layout, Skeleton, theme, Typography} from 'antd';
 
 const {Content} = Layout;
-const {Text} = Typography;
+const {Title} = Typography;
 
 
 const Other: React.FC = () => {
@@ -11,10 +11,9 @@ const Other: React.FC = () => {
     } = theme.useToken();
 
     return (
-        <Content style={{margin: '0 16px'}}>
-            <Skeleton active/>
-            <div style={{padding: 24, minHeight: 360, background: colorBgContainer}}>
-                <Text strong>Other</Text>
+        <Content style={{margin: '0 0px'}}>
+            <div style={{padding: 24, minHeight: "100%", background: colorBgContainer}}>
+                <Title level={2}>Other</Title>
                 <Skeleton active/>
             </div>
         </Content>

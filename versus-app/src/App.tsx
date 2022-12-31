@@ -7,7 +7,7 @@ import Snooze from "./components/Snooze";
 import Other from "./components/Other";
 import NoMatch from "./components/NoMatch";
 
-const {Header, Footer, Sider} = Layout;
+const {Footer, Sider} = Layout;
 const {Text, Link} = Typography;
 
 
@@ -40,8 +40,6 @@ const App: React.FC = () => {
                 </Menu>
             </Sider>
             <Layout className="site-layout">
-                <Header style={{padding: 0, background: colorBgContainer}}/>
-
                 <Routes>
                     <Route path="/" element={<Home/>}></Route>
                     <Route path="snooze" element={<Snooze/>}></Route>
@@ -49,7 +47,7 @@ const App: React.FC = () => {
                     <Route path="*" element={<NoMatch/>}></Route>
                 </Routes>
 
-                <Footer style={{textAlign: 'center'}}>
+                <Footer style={{textAlign: 'center', maxHeight: 40, padding: 0, background:colorBgContainer}}>
                     <Text strong>Versus </Text>
                     <CopyrightOutlined/>
                     <Text strong>2022 ✨ </Text>
