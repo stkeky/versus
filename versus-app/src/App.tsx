@@ -1,15 +1,7 @@
 import React, {useState} from 'react';
-import {
-    ClockCircleFilled, ClockCircleOutlined,
-    ClockCircleTwoTone, CopyOutlined, CopyrightOutlined, CopyrightTwoTone,
-    DesktopOutlined,
-    FileOutlined, HomeFilled, HomeOutlined, HomeTwoTone,
-    PieChartOutlined,
-    TeamOutlined, TrophyOutlined, TrophyTwoTone,
-    UserOutlined,
-} from '@ant-design/icons';
+import {ClockCircleOutlined, CopyrightOutlined, HomeOutlined, TrophyOutlined,} from '@ant-design/icons';
 import type {MenuProps} from 'antd';
-import {Typography, Skeleton, Layout, Menu, theme} from 'antd';
+import {Layout, Menu, Skeleton, theme, Typography} from 'antd';
 
 const {Header, Content, Footer, Sider} = Layout;
 const {Text, Link} = Typography;
