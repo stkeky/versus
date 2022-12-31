@@ -25,7 +25,7 @@ jobs:
         run: |
          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
          cd versus-app
-         npm run deploy -- -u "stkeky_gh_bot <st.keky+ghbot@gmail.com>"
+         npm run deploy -- -u "stkeky_ghbot <st.keky@gmail.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: echo "🍏 This job's status is ${{ job.status }}."

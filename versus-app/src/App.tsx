@@ -1,16 +1,18 @@
 import React, {useState} from 'react';
 import {
+    ClockCircleFilled, ClockCircleOutlined,
+    ClockCircleTwoTone, CopyOutlined, CopyrightOutlined, CopyrightTwoTone,
     DesktopOutlined,
-    FileOutlined,
+    FileOutlined, HomeFilled, HomeOutlined, HomeTwoTone,
     PieChartOutlined,
-    TeamOutlined,
+    TeamOutlined, TrophyOutlined, TrophyTwoTone,
     UserOutlined,
 } from '@ant-design/icons';
 import type {MenuProps} from 'antd';
 import {Typography, Skeleton, Layout, Menu, theme} from 'antd';
 
 const {Header, Content, Footer, Sider} = Layout;
-const { Text, Link } = Typography;
+const {Text, Link} = Typography;
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -29,15 +31,9 @@ function getItem(
 }
 
 const items: MenuItem[] = [
-    getItem('Option 1', '1', <PieChartOutlined/>),
-    getItem('Option 2', '2', <DesktopOutlined/>),
-    getItem('User', 'sub1', <UserOutlined/>, [
-        getItem('Tom', '3'),
-        getItem('Bill', '4'),
-        getItem('Alex', '5'),
-    ]),
-    getItem('Team', 'sub2', <TeamOutlined/>, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
-    getItem('Files', '9', <FileOutlined/>),
+    getItem('Home', '1', <HomeOutlined/>),
+    getItem('Snooze', '2', <ClockCircleOutlined/>),
+    getItem('Other', 'sub1', <TrophyOutlined/>),
 ];
 
 const App: React.FC = () => {
@@ -61,7 +57,9 @@ const App: React.FC = () => {
                     </div>
                 </Content>
                 <Footer style={{textAlign: 'center'}}>
-                    <Text strong>Versus ©2022 ✨</Text>
+                    <Text strong>Versus </Text>
+                    <CopyrightOutlined/>
+                    <Text strong>2022 ✨ </Text>
                     <Link href="https://github.com/stkeky" target="_blank">@stkeky</Link>
                 </Footer>
             </Layout>
