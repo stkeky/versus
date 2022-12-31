@@ -1,32 +1,15 @@
 import React, {useState} from 'react';
 import {ClockCircleOutlined, CopyrightOutlined, HomeOutlined, TrophyOutlined,} from '@ant-design/icons';
-import type {MenuProps} from 'antd';
-import {Layout, Menu, Skeleton, theme, Typography} from 'antd';
+import {Layout, Menu, theme, Typography} from 'antd';
+import {Link as RouteLink, Route, Routes} from "react-router-dom";
+import Home from "./components/Home";
+import Snooze from "./components/Snooze";
+import Other from "./components/Other";
+import NoMatch from "./components/NoMatch";
 
-const {Header, Content, Footer, Sider} = Layout;
+const {Header, Footer, Sider} = Layout;
 const {Text, Link} = Typography;
 
-type MenuItem = Required<MenuProps>['items'][number];
-
-function getItem(
-    label: React.ReactNode,
-    key: React.Key,
-    icon?: React.ReactNode,
-    children?: MenuItem[],
-): MenuItem {
-    return {
-        key,
-        icon,
-        children,
-        label,
-    } as MenuItem;
-}
-
-const items: MenuItem[] = [
-    getItem('Home', '1', <HomeOutlined/>),
-    getItem('Snooze', '2', <ClockCircleOutlined/>),
-    getItem('Other', 'sub1', <TrophyOutlined/>),
-];
 
 const App: React.FC = () => {
     const [collapsed, setCollapsed] = useState(false);
@@ -38,16 +21,34 @@ const App: React.FC = () => {
         <Layout style={{minHeight: '100vh'}}>
             <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
                 <div style={{height: 32, margin: 16, background: 'rgba(255, 255, 255, 0.2)'}}/>
-                <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items}/>
+                <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
+                    <Menu.Item key="1">
+                        <HomeOutlined/>
+                        <span>Home</span>
+                        <RouteLink to="/"/>
+                    </Menu.Item>
+                    <Menu.Item key="2">
+                        <ClockCircleOutlined/>
+                        <span>Snooze</span>
+                        <RouteLink to="/snooze"/>
+                    </Menu.Item>
+                    <Menu.Item key="3">
+                        <TrophyOutlined/>
+                        <span>Other</span>
+                        <RouteLink to="/other"/>
+                    </Menu.Item>
+                </Menu>
             </Sider>
             <Layout className="site-layout">
                 <Header style={{padding: 0, background: colorBgContainer}}/>
-                <Content style={{margin: '0 16px'}}>
-                    <Skeleton active/>
-                    <div style={{padding: 24, minHeight: 360, background: colorBgContainer}}>
-                        <Skeleton active/>
-                    </div>
-                </Content>
+
+                <Routes>
+                    <Route path="/" element={<Home/>}></Route>
+                    <Route path="snooze" element={<Snooze/>}></Route>
+                    <Route path="other" element={<Other/>}></Route>
+                    <Route path="*" element={<NoMatch/>}></Route>
+                </Routes>
+
                 <Footer style={{textAlign: 'center'}}>
                     <Text strong>Versus </Text>
                     <CopyrightOutlined/>
