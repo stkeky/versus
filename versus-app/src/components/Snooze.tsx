@@ -1,37 +1,21 @@
 import React, {Fragment} from 'react';
 
 import data from "./../db.json";
-import {Card, Divider, Grid, Header, Icon, Image} from "semantic-ui-react";
+import {Card, Divider, Grid, Header, Icon, Image, List} from "semantic-ui-react";
 
-
-const listData = [
-    {
-        title: 'Ant Design Title 1',
-    },
-    {
-        title: 'Ant Design Title 2',
-    },
-    {
-        title: 'Ant Design Title 3',
-    },
-    {
-        title: 'Ant Design Title 4',
-    },
-];
 
 const Snooze: React.FC = () => {
-
 
     return (
         <Fragment>
             <div style={{padding: 24, minHeight: "100%"}}>
-                <Header level={2}>Snooze</Header>
+                <Header level={2} textAlign="center">STKEKY vs. SNOOZE BUTTON </Header>
 
                 <Divider/>
 
                 <Grid celled divided>
                     <Grid.Row>
-                        <Grid.Column width={3}>
+                        <Grid.Column width={4}>
                             <Card key="stkeky" link>
                                 <Image alt="stkeky"
                                        src="https://avatars.githubusercontent.com/u/16312404?v=4"
@@ -48,13 +32,13 @@ const Snooze: React.FC = () => {
                                 <Card.Content extra>
                                     <a>
                                         <Icon name='user'/>
-                                        {data.stkeky.supporters} Supporters
+                                        {data.stkeky.supporters.length} Supporters
                                     </a>
                                 </Card.Content>
                             </Card>
                         </Grid.Column>
-                        <Grid.Column width={10}></Grid.Column>
-                        <Grid.Column width={3}>
+                        <Grid.Column width={8}></Grid.Column>
+                        <Grid.Column width={4}>
                             <Card key="snooze" link>
                                 <Image alt="snooze"
                                        src="https://cdn-icons-png.flaticon.com/512/9188/9188917.png"
@@ -72,10 +56,52 @@ const Snooze: React.FC = () => {
                                 <Card.Content extra>
                                     <a>
                                         <Icon name='user'/>
-                                        {data.snooze.supporters} Supporters
+                                        {data.snooze.supporters.length} Supporters
                                     </a>
                                 </Card.Content>
                             </Card>
+                        </Grid.Column>
+                    </Grid.Row>
+                    <Grid.Row>
+                        <Grid.Column width={7}>
+                            <List>
+                                {data.stkeky.supporters.map((supporter: any) => {
+                                    return (
+                                        <List.Item>
+                                            <Image avatar src={supporter.avatar}/>
+                                            <List.Content>
+                                                <List.Header as='a'>{supporter.name}</List.Header>
+                                                <List.Description>
+                                                    {supporter.comment}
+                                                </List.Description>
+                                            </List.Content>
+                                        </List.Item>
+                                    );
+                                })}
+                            </List>
+                        </Grid.Column>
+                        <Grid.Column width={2} textAlign="center">
+                            <Fragment>
+                                <Icon circular name='users' size="big"/>
+                            </Fragment>
+
+                        </Grid.Column>
+                        <Grid.Column width={7}>
+                            <List>
+                                {data.snooze.supporters.map((supporter: any) => {
+                                    return (
+                                        <List.Item>
+                                            <Image avatar src={supporter.avatar}/>
+                                            <List.Content>
+                                                <List.Header as='a'>{supporter.name}</List.Header>
+                                                <List.Description>
+                                                    {supporter.comment}
+                                                </List.Description>
+                                            </List.Content>
+                                        </List.Item>
+                                    );
+                                })}
+                            </List>
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
