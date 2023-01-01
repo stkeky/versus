@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {Link as RouteLink, Route, Routes} from "react-router-dom";
+import React from 'react';
+import {Route, Routes} from "react-router-dom";
 import Home from "./components/Home";
 import Snooze from "./components/Snooze";
 import Other from "./components/Other";

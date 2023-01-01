@@ -30,7 +30,7 @@ const Snooze: React.FC = () => {
                                     </Card.Description>
                                 </Card.Content>
                                 <Card.Content extra>
-                                    <a>
+                                    <a href="#">
                                         <Icon name='user'/>
                                         {data.stkeky.supporters.length} Supporters
                                     </a>
@@ -54,7 +54,7 @@ const Snooze: React.FC = () => {
                                     </Card.Description>
                                 </Card.Content>
                                 <Card.Content extra>
-                                    <a>
+                                    <a href="#">
                                         <Icon name='user'/>
                                         {data.snooze.supporters.length} Supporters
                                     </a>
