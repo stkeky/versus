@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/versus/static/css/main.5e0bcf8c.css",
-    "main.js": "/versus/static/js/main.e483d883.js",
+    "main.css": "/versus/static/css/main.80c28ae5.css",
+    "main.js": "/versus/static/js/main.db7b7501.js",
     "static/js/787.b8db1acd.chunk.js": "/versus/static/js/787.b8db1acd.chunk.js",
     "static/media/brand-icons.svg": "/versus/static/media/brand-icons.6729d29753e000c17489.svg",
     "static/media/icons.svg": "/versus/static/media/icons.62d9dae4e0040e81c980.svg",
@@ -20,12 +20,12 @@
     "static/media/outline-icons.woff": "/versus/static/media/outline-icons.ddae9b1ba9b0b42f5880.woff",
     "static/media/outline-icons.woff2": "/versus/static/media/outline-icons.687a4990ea22bb1a49d4.woff2",
     "index.html": "/versus/index.html",
-    "main.5e0bcf8c.css.map": "/versus/static/css/main.5e0bcf8c.css.map",
-    "main.e483d883.js.map": "/versus/static/js/main.e483d883.js.map",
+    "main.80c28ae5.css.map": "/versus/static/css/main.80c28ae5.css.map",
+    "main.db7b7501.js.map": "/versus/static/js/main.db7b7501.js.map",
     "787.b8db1acd.chunk.js.map": "/versus/static/js/787.b8db1acd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e0bcf8c.css",
-    "static/js/main.e483d883.js"
+    "static/css/main.80c28ae5.css",
+    "static/js/main.db7b7501.js"
   ]
 }
