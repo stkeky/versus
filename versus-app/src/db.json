@@ -1,36 +1,78 @@
 {
-  "stkeky": {
-    "progress": 45,
-    "supporters": [
-      {
-        "name": "Rachel",
-        "avatar": "https://react.semantic-ui.com/images/avatar/small/rachel.png",
-        "comment": "Keep going!",
-        "createdAt": ""
+  "timeline": [
+    {
+      "date": "2023-01-01",
+      "stkeky": {
+        "points": -10,
+        "supporters": [
+          {
+            "name": "Rachel",
+            "avatar": "https://react.semantic-ui.com/images/avatar/small/rachel.png",
+            "comment": "Keep going!",
+            "createdAt": "2022-01-01"
+          }
+        ]
       },
-      {
-        "name": "Matthew",
-        "avatar": "https://react.semantic-ui.com/images/avatar/small/matthew.png",
-        "comment": "You can do it!",
-        "createdAt": ""
+      "snooze": {
+        "points": 0,
+        "supporters": []
+      }
+    },
+    {
+      "date": "2023-01-02",
+      "stkeky": {
+        "points": 58,
+        "supporters": [
+          {
+            "name": "Matthew",
+            "avatar": "https://react.semantic-ui.com/images/avatar/small/matthew.png",
+            "comment": "You can do it!",
+            "createdAt": ""
+          },
+          {
+            "name": "Matthew",
+            "avatar": "https://react.semantic-ui.com/images/avatar/small/matthew.png",
+            "comment": "Still with you.",
+            "createdAt": ""
+          }
+        ]
       },
-      {
-        "name": "Matthew",
-        "avatar": "https://react.semantic-ui.com/images/avatar/small/matthew.png",
-        "comment": "Still with you.",
-        "createdAt": ""
+      "snooze": {
+        "points": 3,
+        "supporters": [
+          {
+            "name": "Lindsay",
+            "avatar": "https://react.semantic-ui.com/images/avatar/small/lindsay.png",
+            "comment": "Why not snooze!",
+            "createdAt": ""
+          }
+        ]
       }
-    ]
-  },
-  "snooze": {
-    "progress": 62,
-    "supporters": [
-      {
-        "name": "Lindsay",
-        "avatar": "https://react.semantic-ui.com/images/avatar/small/lindsay.png",
-        "comment": "Why not snooze!",
-        "createdAt": ""
+    },
+    {
+      "date": "2023-01-03",
+      "stkeky": {
+        "points": 0,
+        "supporters": [
+          {
+            "name": "Matthew",
+            "avatar": "https://react.semantic-ui.com/images/avatar/small/matthew.png",
+            "comment": "You can do it!",
+            "createdAt": ""
+          }
+        ]
+      },
+      "snooze": {
+        "points": 7,
+        "supporters": [
+          {
+            "name": "Lindsay",
+            "avatar": "https://react.semantic-ui.com/images/avatar/small/lindsay.png",
+            "comment": "Why not snooze!",
+            "createdAt": ""
+          }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }
