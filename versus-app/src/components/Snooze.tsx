@@ -4,6 +4,8 @@ import data from "./../db.json";
 import {Card, Divider, Grid, Header, Icon, Image, List, Segment} from "semantic-ui-react";
 import {buildStyles, CircularProgressbar} from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';
+import 'react-calendar-heatmap/dist/styles.css';
+import CalendarHeatmap from 'react-calendar-heatmap';
 
 
 const Snooze: React.FC = () => {
@@ -52,6 +54,20 @@ const Snooze: React.FC = () => {
                                 </Grid.Column>
                             </Grid.Row>
                             <Grid.Row>
+                                <Grid.Column>
+                                    <Segment>
+                                        <CalendarHeatmap
+                                            startDate={new Date('2023-01-01')}
+                                            endDate={new Date('2023-12-31')}
+                                            values={[
+                                                { date: '2023-01-01', count: 12 },
+                                                { date: '2023-01-02', count: 122 },
+                                                { date: '2023-01-03', count: 38 },
+                                            ]}
+                                        />
+                                    </Segment>
+                                </Grid.Column>
+
 
                             </Grid.Row>
                             </Grid>
