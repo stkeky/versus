@@ -1,7 +1,9 @@
 import React, {Fragment} from 'react';
 
 import data from "./../db.json";
-import {Card, Divider, Grid, Header, Icon, Image, List} from "semantic-ui-react";
+import {Card, Divider, Grid, Header, Icon, Image, List, Segment} from "semantic-ui-react";
+import {buildStyles, CircularProgressbar} from "react-circular-progressbar";
+import 'react-circular-progressbar/dist/styles.css';
 
 
 const Snooze: React.FC = () => {
@@ -35,7 +37,25 @@ const Snooze: React.FC = () => {
                                 </Card.Content>
                             </Card>
                         </Grid.Column>
-                        <Grid.Column width={8}></Grid.Column>
+                        <Grid.Column width={8}>
+                            <Grid>
+                            <Grid.Row>
+                                <Grid.Column width={8}>
+                                    <Segment>
+                                        <CircularProgressbar value={data.stkeky.progress} maxValue={100} text={`${data.stkeky.progress} Points`} />
+                                    </Segment>
+                                </Grid.Column>
+                                <Grid.Column width={8}>
+                                    <Segment>
+                                        <CircularProgressbar value={data.snooze.progress} maxValue={100} text={`${data.snooze.progress} Points`} styles={buildStyles({pathColor: `rgba(196, 40, 36, 0.8)`, textColor: `rgba(196, 40, 36, 0.8)`})} />
+                                    </Segment>
+                                </Grid.Column>
+                            </Grid.Row>
+                            <Grid.Row>
+
+                            </Grid.Row>
+                            </Grid>
+                        </Grid.Column>
                         <Grid.Column width={4}>
                             <Card key="snooze" link>
                                 <Image alt="snooze"
