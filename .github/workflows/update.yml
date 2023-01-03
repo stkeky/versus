@@ -1,21 +1,14 @@
 name: Update supporters
-run-name: ${{ github.actor }} is deploying to GH pages 🚀
+run-name: ${{ github.actor }} is handling new issue 🚀
 on:
   issues:
     types: [opened]
 
 jobs:
-  extract-date:
+  handle-issue:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job triggered by a ${{ github.event_name }} event is running on ${{ runner.os }} for branch ${{ github.ref }}"
-      - name: Parse issue
-        env:
-          EVENT_ISSUE_TITLE: ${{ github.event.issue.title }}
-          EVENT_USER_LOGIN: ${{ github.event.issue.user.login }}
-          EVENT_USER_AVATAR: ${{ github.event.issue.user.avatar_url }}
-          EVENT_USER_URL: ${{ github.event.issue.user.url }}
-        run: echo "Data retrieved"
       - name: Check out repository code
         uses: actions/checkout@v3
       - name: Update data
@@ -26,9 +19,14 @@ jobs:
           git config user.email github-actions@github.com
 
       - name: Commit/Push Changes
+        env:
+          EVENT_ISSUE_TITLE: ${{ github.event.issue.title }}
+          EVENT_USER_LOGIN: ${{ github.event.issue.user.login }}
+          EVENT_USER_AVATAR: ${{ github.event.issue.user.avatar_url }}
+          EVENT_USER_URL: ${{ github.event.issue.user.url }}
         run: |
           git add *
-          git commit -m "Automated YAPF Formatting" | exit 0
+          git commit -m "Update data" | exit 0
           git push
       - name: Close Issue
         uses: peter-evans/close-issue@v1
