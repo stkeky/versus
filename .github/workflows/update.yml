@@ -17,5 +17,5 @@ jobs:
           EVENT_USER_EMAIL: ${{ github.event.issue.user.email }}
           EVENT_USER_NAME: ${{ github.event.issue.user.name }}
           EVENT_USER_AVATAR: ${{ github.event.issue.user.avatar_url }}
-        run: echo "payload ${{github.event.issue}}"
-        
+        run: echo "${{github.event.issue}}" | python -m json.tool
+
