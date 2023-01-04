@@ -3,7 +3,10 @@ run-name: ${{ github.actor }} is deploying to GH pages 🚀
 on:
   push:
     branches: [master]
-
+  workflow_run:
+    workflows: ["Update supporters"]
+    types:
+      - completed
 jobs:
   deploy-gh-pages:
     runs-on: ubuntu-latest
