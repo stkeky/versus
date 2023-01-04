@@ -85,6 +85,24 @@
           }
         ]
       }
+    },
+    {
+      "date": "2023-01-04",
+      "stkeky": {
+        "points": 0,
+        "supporters": [
+          {
+            "name": "stkeky",
+            "avatar": "https://avatars.githubusercontent.com/u/16312404?v=4",
+            "comment": "Test 2",
+            "createdAt": "2023-01-04T00:00:33.474398"
+          }
+        ]
+      },
+      "snooze": {
+        "points": 0,
+        "supporters": []
+      }
     }
   ]
 }
