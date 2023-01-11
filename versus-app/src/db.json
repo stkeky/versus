@@ -3,15 +3,8 @@
     {
       "date": "2023-01-01",
       "stkeky": {
-        "points": -10,
-        "supporters": [
-          {
-            "name": "Rachel",
-            "avatar": "https://react.semantic-ui.com/images/avatar/small/rachel.png",
-            "comment": "Keep going!",
-            "createdAt": "2022-01-01"
-          }
-        ]
+        "points": 1,
+        "supporters": []
       },
       "snooze": {
         "points": 0,
@@ -21,92 +14,117 @@
     {
       "date": "2023-01-02",
       "stkeky": {
-        "points": 58,
+        "points": 1,
         "supporters": [
           {
             "name": "Matthew",
             "avatar": "https://react.semantic-ui.com/images/avatar/small/matthew.png",
             "comment": "You can do it!",
             "createdAt": ""
-          },
-          {
-            "name": "Matthew",
-            "avatar": "https://react.semantic-ui.com/images/avatar/small/matthew.png",
-            "comment": "Still with you.",
-            "createdAt": ""
           }
         ]
       },
       "snooze": {
-        "points": 3,
-        "supporters": [
-          {
-            "name": "Lindsay",
-            "avatar": "https://react.semantic-ui.com/images/avatar/small/lindsay.png",
-            "comment": "Why not snooze!",
-            "createdAt": ""
-          }
-        ]
+        "points": 0,
+        "supporters": []
       }
     },
     {
       "date": "2023-01-03",
       "stkeky": {
-        "points": 0,
-        "supporters": [
-          {
-            "name": "Matthew",
-            "avatar": "https://react.semantic-ui.com/images/avatar/small/matthew.png",
-            "comment": "You can do it!",
-            "createdAt": ""
-          },
-          {
-            "name": null,
-            "avatar": null,
-            "comment": null,
-            "createdAt": "2023-01-03T23:57:31.547919"
-          },
-          {
-            "name": null,
-            "avatar": null,
-            "comment": null,
-            "createdAt": "2023-01-03T23:59:10.453238"
-          }
-        ]
+        "points": 1,
+        "supporters": []
       },
       "snooze": {
-        "points": 7,
-        "supporters": [
-          {
-            "name": "Lindsay",
-            "avatar": "https://react.semantic-ui.com/images/avatar/small/lindsay.png",
-            "comment": "Why not snooze!",
-            "createdAt": ""
-          }
-        ]
+        "points": 0,
+        "supporters": []
       }
     },
     {
       "date": "2023-01-04",
       "stkeky": {
         "points": 0,
-        "supporters": [
-          {
-            "name": "stkeky",
-            "avatar": "https://avatars.githubusercontent.com/u/16312404?v=4",
-            "comment": "Test 2",
-            "createdAt": "2023-01-04T00:00:33.474398"
-          },
-          {
-            "name": "stkeky",
-            "avatar": "https://avatars.githubusercontent.com/u/16312404?v=4",
-            "comment": "Let's gooooooo",
-            "createdAt": "2023-01-04T00:10:09.188402"
-          }
-        ]
+        "supporters": []
+      },
+      "snooze": {
+        "points": 1,
+        "supporters": []
+      }
+    },
+    {
+      "date": "2023-01-05",
+      "stkeky": {
+        "points": 1,
+        "supporters": []
       },
       "snooze": {
         "points": 0,
+        "supporters": []
+      }
+    },
+    {
+      "date": "2023-01-06",
+      "stkeky": {
+        "points": 1,
+        "supporters": []
+      },
+      "snooze": {
+        "points": 0,
+        "supporters": []
+      }
+    },
+    {
+      "date": "2023-01-07",
+      "stkeky": {
+        "points": 1,
+        "supporters": []
+      },
+      "snooze": {
+        "points": 0,
+        "supporters": []
+      }
+    },
+    {
+      "date": "2023-01-08",
+      "stkeky": {
+        "points": 1,
+        "supporters": []
+      },
+      "snooze": {
+        "points": 0,
+        "supporters": []
+      }
+    },
+    {
+      "date": "2023-01-09",
+      "stkeky": {
+        "points": 1,
+        "supporters": []
+      },
+      "snooze": {
+        "points": 0,
+        "supporters": []
+      }
+    },
+    {
+      "date": "2023-01-10",
+      "stkeky": {
+        "points": 0,
+        "supporters": []
+      },
+      "snooze": {
+        "points": 3,
+        "supporters": []
+      }
+    },
+    {
+      "date": "2023-01-10",
+      "stkeky": {
+        "points": 0,
+        "supporters": []
+      },
+      "snooze": {
+        "points": 2,
         "supporters": []
       }
     }
