@@ -1,10 +1,11 @@
 import React, {Fragment} from 'react';
 
 import data from "./../db.json";
-import {Card, Divider, Grid, Header, Icon, Image, List, Segment} from "semantic-ui-react";
+import {Card, Grid, Header, Icon, Image, List, Segment} from "semantic-ui-react";
 import {buildStyles, CircularProgressbar} from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';
 import 'react-calendar-heatmap/dist/styles.css';
+import '../App.css';
 import CalendarHeatmap from 'react-calendar-heatmap';
 import ReactTooltip from 'react-tooltip';
 
@@ -19,17 +20,17 @@ const Snooze: React.FC = () => {
     const stkekySupportersList = data.timeline.map(x => x.stkeky.supporters).reduce((all, current) => all.concat(current), [])
     const snoozeSupportersList = data.timeline.map(x => x.snooze.supporters).reduce((all, current) => all.concat(current), [])
 
-    const heatmap = data.timeline.map(x => ({"date": new Date(x.date) , "count": x.stkeky.points + x.stkeky.supporters.length - x.snooze.points - x.snooze.supporters.length}))
+    const heatmap = data.timeline.map(x => ({
+        "date": new Date(x.date),
+        "count": x.stkeky.points + x.stkeky.supporters.length - x.snooze.points - x.snooze.supporters.length
+    }))
 
-    // @ts-ignore
-    // @ts-ignore
-    // @ts-ignore
     return (
         <Fragment>
             <div style={{padding: 24, minHeight: "100%"}}>
-                <Header level={2} textAlign="center">STKEKY vs. SNOOZE BUTTON </Header>
-
-                <Divider/>
+                <Segment color="teal" raised>
+                    <Header level={3} textAlign="center">STKEKY vs. SNOOZE BUTTON </Header>
+                </Segment>
 
                 <Grid celled divided>
                     <Grid.Row>
@@ -44,7 +45,7 @@ const Snooze: React.FC = () => {
                                         <span className='date'>player one</span>
                                     </Card.Meta>
                                     <Card.Description>
-                                        Simple guy trying to resolve bad habit.
+                                        Simple guy trying to resolve a bad habit.
                                     </Card.Description>
                                 </Card.Content>
                                 <Card.Content extra>
@@ -55,52 +56,64 @@ const Snooze: React.FC = () => {
                         </Grid.Column>
                         <Grid.Column width={8}>
                             <Grid>
-                            <Grid.Row>
-                                <Grid.Column width={8}>
-                                    <Segment>
-                                        <CircularProgressbar value={stkekyTotal} maxValue={100} text={`${stkekyTotal} Points`} />
-                                    </Segment>
-                                </Grid.Column>
-                                <Grid.Column width={8}>
-                                    <Segment>
-                                        <CircularProgressbar value={snoozeTotal} maxValue={100} text={`${snoozeTotal} Points`} styles={buildStyles({pathColor: `rgba(196, 40, 36, 0.8)`, textColor: `rgba(196, 40, 36, 0.8)`})} />
-                                    </Segment>
-                                </Grid.Column>
-                            </Grid.Row>
-                            <Grid.Row>
-                                <Grid.Column>
-                                    <Segment>
-                                        <CalendarHeatmap
+                                <Grid.Row>
+                                    <Grid.Column width={8}>
+                                        <Segment>
+                                            <CircularProgressbar value={stkekyTotal}
+                                                                 maxValue={100} text={`${stkekyTotal} Points`}
+                                                                 styles={buildStyles({
+                                                                     pathColor: "#118AB2",
+                                                                     textColor: "#118AB2"
+                                                                 })}/>
+                                        </Segment>
+                                    </Grid.Column>
+                                    <Grid.Column width={8}>
+                                        <Segment>
+                                            <CircularProgressbar value={snoozeTotal}
+                                                                 maxValue={100} text={`${snoozeTotal} Points`}
+                                                                 styles={buildStyles({
+                                                                     pathColor: "#EF476F",
+                                                                     textColor: "#EF476F"
+                                                                 })}/>
+                                        </Segment>
+                                    </Grid.Column>
+                                </Grid.Row>
+                                <Grid.Row>
+                                    <Grid.Column>
+                                        <Segment>
+                                            <CalendarHeatmap
 
-                                            startDate={new Date('2022-12-31')}
-                                            endDate={new Date('2023-12-30')}
-                                            values={heatmap}
+                                                startDate={new Date('2022-12-31')}
+                                                endDate={new Date('2023-12-30')}
+                                                values={heatmap}
 
-                                            tooltipDataAttrs={(value:any) => {
-                                                return {
-                                                    'data-tip': value.count
+                                                tooltipDataAttrs={(value: any) => {
+                                                    if (value.date != null) {
+                                                        return {'data-tip': `${value.date.toISOString().split('T')[0]} resulted in ${value.count}`}
+                                                    } else {
+                                                        return null;
                                                     }
                                                 }
-                                            }
-
-                                            classForValue={(value) => {
-                                                if (!value) {
-                                                    return 'color-empty';
                                                 }
-                                                if (value.count > 0) {
-                                                    return `color-gitlab-3`;
-                                                } else {
-                                                    return `color-github-4`;
-                                                }
-                                            }}
 
-                                        />
-                                        <ReactTooltip/>
-                                    </Segment>
-                                </Grid.Column>
+                                                classForValue={(value) => {
+                                                    if (!value) {
+                                                        return 'color-empty';
+                                                    }
+                                                    if (value.count > 0) {
+                                                        return `player-one`;
+                                                    } else {
+                                                        return `player-two`;
+                                                    }
+                                                }}
+
+                                            />
+                                            <ReactTooltip/>
+                                        </Segment>
+                                    </Grid.Column>
 
 
-                            </Grid.Row>
+                                </Grid.Row>
                             </Grid>
                         </Grid.Column>
                         <Grid.Column width={4}>
@@ -110,12 +123,12 @@ const Snooze: React.FC = () => {
 
                                        wrapped ui={false}/>
                                 <Card.Content>
-                                    <Card.Header>Snooze button</Card.Header>
+                                    <Card.Header>snooze button</Card.Header>
                                     <Card.Meta>
                                         <span className='date'>player two</span>
                                     </Card.Meta>
                                     <Card.Description>
-                                        Proper sleeping habits depriving monster.
+                                        Monster that deprives proper sleeping habits.
                                     </Card.Description>
                                 </Card.Content>
                                 <Card.Content extra>

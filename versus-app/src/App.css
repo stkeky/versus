@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+
+.react-calendar-heatmap .player-one {
+  fill: #118AB2;
+}
+.react-calendar-heatmap .player-two {
+  fill: #EF476F;
+}
