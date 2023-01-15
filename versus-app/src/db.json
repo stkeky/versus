@@ -127,6 +127,24 @@
         "points": 2,
         "supporters": []
       }
+    },
+    {
+      "date": "2023-01-15",
+      "stkeky": {
+        "points": 0,
+        "supporters": [
+          {
+            "name": "stkeky",
+            "avatar": "https://avatars.githubusercontent.com/u/16312404?v=4",
+            "comment": "\r\nTest support!",
+            "createdAt": "2023-01-15T13:43:05.216832"
+          }
+        ]
+      },
+      "snooze": {
+        "points": 0,
+        "supporters": []
+      }
     }
   ]
 }
