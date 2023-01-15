@@ -3,11 +3,18 @@ import os
 from datetime import date, datetime
 
 if __name__ == '__main__':
+    db_path = "versus-app/src/db.json"
+
     user_name = os.getenv("EVENT_USER_LOGIN")
     user_avatar = os.getenv("EVENT_USER_AVATAR")
-    comment = os.getenv("EVENT_ISSUE_TITLE")
-    supporting = "stkeky"  # TODO provide support for others
-    db_path = "versus-app/src/db.json"
+    title = os.getenv("EVENT_ISSUE_TITLE")
+    body = os.getenv("EVENT_ISSUE_BODY")
+
+    title_data = title.split("|")
+    game = title_data[0] # TODO 
+    supporting = title_data[1]
+    comment = body.split("-->")[1] # naive
+
     with open(db_path, "r") as f:
         data = json.load(f)
 

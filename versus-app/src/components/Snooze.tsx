@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
 
 import data from "./../db.json";
-import {Card, Grid, Header, Icon, Image, List, Segment} from "semantic-ui-react";
+import {Button, Card, Grid, Header, Icon, Image, List, Segment} from "semantic-ui-react";
 import {buildStyles, CircularProgressbar} from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';
 import 'react-calendar-heatmap/dist/styles.css';
@@ -113,6 +113,19 @@ const Snooze: React.FC = () => {
                                     </Grid.Column>
 
 
+                                </Grid.Row>
+                                <Grid.Row>
+                                    <Grid.Column width={16} textAlign={"center"}>
+                                        <Button.Group>
+                                            <Button as="a"
+                                                    href="https://github.com/stkeky/versus/issues/new?title=vs1%7Cstkeky&body=%3C%21--%20Please%20leave%20a%20comment%20and%20click%20the%20%27Submit%20new%20issue%27.%20--%3E"
+                                                    color={"blue"}>Support player one</Button>
+                                            <Button.Or text='or'/>
+                                            <Button as="a"
+                                                    href="https://github.com/stkeky/versus/issues/new?title=vs1%7Csnooze&body=%3C%21--%20Please%20leave%20a%20comment%20and%20click%20the%20%27Submit%20new%20issue%27.%20--%3E"
+                                                    color={"red"}>Support player two</Button>
+                                        </Button.Group>
+                                    </Grid.Column>
                                 </Grid.Row>
                             </Grid>
                         </Grid.Column>
