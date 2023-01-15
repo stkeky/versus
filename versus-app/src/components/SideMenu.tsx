@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Icon, Image, Menu} from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import logo from "./../logo192.png";
+import {Config} from "../Config";
 
 
 const SideMenu: React.FC = () => {
@@ -27,7 +28,7 @@ const SideMenu: React.FC = () => {
 
             <Menu.Item name="versus" active={false}
                        style={{position: "absolute", bottom: 5, left: 0, width: "100%"}}>
-                <code>v0.0.1</code>
+                <code>{Config.VERSION}</code>
             </Menu.Item>
         </Menu>
     );
