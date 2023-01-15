@@ -129,9 +129,42 @@
       }
     },
     {
-      "date": "2023-01-15",
+      "date": "2023-01-12",
       "stkeky": {
         "points": 0,
+        "supporters": []
+      },
+      "snooze": {
+        "points": 2,
+        "supporters": []
+      }
+    },
+    {
+      "date": "2023-01-13",
+      "stkeky": {
+        "points": 1,
+        "supporters": []
+      },
+      "snooze": {
+        "points": 0,
+        "supporters": []
+      }
+    },
+    {
+      "date": "2023-01-14",
+      "stkeky": {
+        "points": 1,
+        "supporters": []
+      },
+      "snooze": {
+        "points": 0,
+        "supporters": []
+      }
+    },
+    {
+      "date": "2023-01-15",
+      "stkeky": {
+        "points": 1,
         "supporters": [
           {
             "name": "stkeky",
