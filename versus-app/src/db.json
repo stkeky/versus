@@ -15,14 +15,7 @@
       "date": "2023-01-02",
       "stkeky": {
         "points": 1,
-        "supporters": [
-          {
-            "name": "Matthew",
-            "avatar": "https://react.semantic-ui.com/images/avatar/small/matthew.png",
-            "comment": "You can do it!",
-            "createdAt": ""
-          }
-        ]
+        "supporters": []
       },
       "snooze": {
         "points": 0,
@@ -169,13 +162,24 @@
           {
             "name": "stkeky",
             "avatar": "https://avatars.githubusercontent.com/u/16312404?v=4",
-            "comment": "\r\nTest support!",
+            "comment": "Test support!",
             "createdAt": "2023-01-15T13:43:05.216832"
           }
         ]
       },
       "snooze": {
         "points": 0,
+        "supporters": []
+      }
+    },
+    {
+      "date": "2023-01-16",
+      "stkeky": {
+        "points": 0,
+        "supporters": []
+      },
+      "snooze": {
+        "points": 2,
         "supporters": []
       }
     }
