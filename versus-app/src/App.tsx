@@ -7,20 +7,18 @@ import SideMenu from "./components/SideMenu";
 import {Container} from "semantic-ui-react";
 
 
-
 const App: React.FC = () => {
 
     return (
-        <Container style={{minHeight: '100vh'}}>
+        <Container>
             <SideMenu></SideMenu>
 
-            <Container className="site-layout"  style={{marginLeft: 50}}>
+            <Container  style={{marginLeft: 100}}>
                 <Routes>
                     <Route path="/versus" element={<Home/>}></Route>
                     <Route path="/versus/snooze" element={<Snooze/>}></Route>
                     <Route path="*" element={<NoMatch/>}></Route>
                 </Routes>
-
             </Container>
         </Container>
     );

@@ -15,7 +15,7 @@ const Snooze: React.FC = () => {
     const stkekySupporters = data.timeline.reduce((sum, current) => sum + current.stkeky.supporters.length, 0);
     const snoozeSupporters = data.timeline.reduce((sum, current) => sum + current.snooze.supporters.length, 0);
     const stkekyTotal = stkekyRawPoints + stkekySupporters * 2
-    const snoozeTotal = snoozeRawPoints + snoozeSupporters * 2 
+    const snoozeTotal = snoozeRawPoints + snoozeSupporters * 2
 
     const stkekySupportersList = data.timeline.map(x => x.stkeky.supporters).reduce((all, current) => all.concat(current), [])
     const snoozeSupportersList = data.timeline.map(x => x.snooze.supporters).reduce((all, current) => all.concat(current), [])
