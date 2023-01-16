@@ -62,8 +62,8 @@ const Snooze: React.FC = () => {
                                             <CircularProgressbar value={stkekyTotal}
                                                                  maxValue={100} text={`${stkekyTotal} Points`}
                                                                  styles={buildStyles({
-                                                                     pathColor: "#118AB2",
-                                                                     textColor: "#118AB2"
+                                                                     pathColor: "#2185d0",
+                                                                     textColor: "#2185d0"
                                                                  })}/>
                                         </Segment>
                                     </Grid.Column>
@@ -72,8 +72,8 @@ const Snooze: React.FC = () => {
                                             <CircularProgressbar value={snoozeTotal}
                                                                  maxValue={100} text={`${snoozeTotal} Points`}
                                                                  styles={buildStyles({
-                                                                     pathColor: "#EF476F",
-                                                                     textColor: "#EF476F"
+                                                                     pathColor: "#db2828",
+                                                                     textColor: "#db2828"
                                                                  })}/>
                                         </Segment>
                                     </Grid.Column>
