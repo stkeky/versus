@@ -13,7 +13,7 @@ if __name__ == '__main__':
     title_data = title.split("|")
     game = title_data[0] # TODO 
     supporting = title_data[1]
-    comment = body.split("-->")[1] # naive
+    comment = body.split("-->")[1].strip() # naive
 
     with open(db_path, "r") as f:
         data = json.load(f)
