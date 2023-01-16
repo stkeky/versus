@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import {Container, Header, Image, Label, Segment} from "semantic-ui-react";
 import {Config} from "../Config";
 import logo from "../logo192.png"
