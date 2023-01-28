@@ -1,13 +1,14 @@
 import React, {Fragment} from 'react';
 
 import data from "./../db.json";
-import {Button, Card, Grid, Header, Icon, Image, List, Segment} from "semantic-ui-react";
+import {Button, Card, Grid, Header, Icon, Image, Segment} from "semantic-ui-react";
 import {buildStyles, CircularProgressbar} from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';
 import 'react-calendar-heatmap/dist/styles.css';
 import '../App.css';
 import CalendarHeatmap from 'react-calendar-heatmap';
 import ReactTooltip from 'react-tooltip';
+import Supporters from "./Supporters";
 
 const Snooze: React.FC = () => {
     const stkekyRawPoints = data.timeline.reduce((sum, current) => sum + current.stkeky.points, 0);
@@ -153,44 +154,17 @@ const Snooze: React.FC = () => {
                     </Grid.Row>
                     <Grid.Row>
                         <Grid.Column width={7}>
-                            <List>
-                                {stkekySupportersList.map((supporter: any) => {
-                                    return (
-                                        <List.Item>
-                                            <Image avatar src={supporter.avatar}/>
-                                            <List.Content>
-                                                <List.Header as='a'>{supporter.name}</List.Header>
-                                                <List.Description>
-                                                    {supporter.comment}
-                                                </List.Description>
-                                            </List.Content>
-                                        </List.Item>
-                                    );
-                                })}
-                            </List>
+                            <Supporters supporters={stkekySupportersList}/>
                         </Grid.Column>
+
                         <Grid.Column width={2} textAlign="center">
                             <Fragment>
                                 <Icon circular name='users' size="big"/>
                             </Fragment>
-
                         </Grid.Column>
+
                         <Grid.Column width={7}>
-                            <List>
-                                {snoozeSupportersList.map((supporter: any) => {
-                                    return (
-                                        <List.Item>
-                                            <Image avatar src={supporter.avatar}/>
-                                            <List.Content>
-                                                <List.Header as='a'>{supporter.name}</List.Header>
-                                                <List.Description>
-                                                    {supporter.comment}
-                                                </List.Description>
-                                            </List.Content>
-                                        </List.Item>
-                                    );
-                                })}
-                            </List>
+                            <Supporters supporters={snoozeSupportersList}/>
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
