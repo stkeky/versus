@@ -1,5 +1,6 @@
 import React from 'react';
 import {Comment, Header} from "semantic-ui-react";
+import {formatRelative} from 'date-fns'
 
 interface SupporterProps {
     supporters: Array<any>
@@ -19,7 +20,7 @@ const Supporters: React.FC<SupporterProps> = (props) => {
                         <Comment.Content>
                             <Comment.Author as='a'>{supporter.name}</Comment.Author>
                             <Comment.Metadata>
-                                <div>Today at 5:42PM</div>
+                                <div>{formatRelative(new Date(supporter.createdAt), new Date())}</div>
                             </Comment.Metadata>
                             <Comment.Text>{supporter.comment || "..."}</Comment.Text>
                         </Comment.Content>
